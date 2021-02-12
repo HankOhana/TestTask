@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Common-->
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="default_padding">@dimen/default_margin</dimen>
+    <dimen name="default_half_margin">8dp</dimen>
+    <dimen name="default_half_padding">@dimen/default_half_margin</dimen>
+    <dimen name="default_quarter_margin">4dp</dimen>
+    <dimen name="default_quarter_padding">@dimen/default_quarter_margin</dimen>
+    <dimen name="default_double_margin">32dp</dimen>
+    <dimen name="default_double_padding">@dimen/default_double_margin</dimen>
+    <dimen name="default_card_elevation">6dp</dimen>
+    <dimen name="divider_width">0.5dp</dimen>
+    <dimen name="stroke_width">1.5dp</dimen>
+    <dimen name="zero">0dp</dimen>
+
+    <dimen name="content_loader_size">5dp</dimen>
+
+</resources>

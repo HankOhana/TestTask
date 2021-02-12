@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TipRanksTask</string>
+
+    <string name="promotion">Promotion</string>
+    <string name="go_to_promotion">Go to promotion</string>
+    <string name="retry">Retry</string>
+    <string name="search_title">Search</string>
+
+    <!--    Navigation-->
+    <string name="post_link_argument" translatable="false">post_link_argument</string>
+</resources>

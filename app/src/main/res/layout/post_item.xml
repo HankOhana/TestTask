@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/default_card_elevation"
+    android:layout_marginVertical="@dimen/default_half_margin"
+    android:layout_marginHorizontal="@dimen/default_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/default_half_padding">
+
+        <ImageView
+            android:id="@+id/post_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:scaleType="fitCenter"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/author_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="@dimen/default_quarter_padding"
+            app:strokeWidth="@dimen/stroke_width"
+            app:strokeColor="?attr/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_image"
+            app:shapeAppearanceOverlay="@style/roundedImageViewStyle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/post_title"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="@dimen/default_half_margin"
+            app:layout_constraintBottom_toTopOf="@+id/author_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/author_icon"
+            app:layout_constraintTop_toTopOf="@id/author_icon"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/author_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/author_icon"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/author_icon"
+            app:layout_constraintStart_toStartOf="@id/post_title"
+            app:layout_constraintTop_toBottomOf="@+id/post_title"
+            tools:text='Author name' />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="@dimen/divider_width"
+            android:layout_height="@dimen/zero"
+            android:layout_marginHorizontal="@dimen/default_half_margin"
+            android:alpha="0.1"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/author_name"
+            app:layout_constraintEnd_toStartOf="@+id/date"
+            app:layout_constraintStart_toEndOf="@+id/author_name"
+            app:layout_constraintTop_toTopOf="@id/author_name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/zero"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@id/author_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider"
+            app:layout_constraintTop_toTopOf="@id/author_name"
+            tools:text="5 min ago" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/post_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/author_icon" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

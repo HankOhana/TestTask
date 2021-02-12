@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/posts">
+
+    <fragment
+        android:id="@+id/posts"
+        android:name="com.example.tiprankstask.ui.PostsFragment"
+        tools:layout="@layout/fragment_posts">
+        <action
+            android:id="@+id/action_posts_to_postItem"
+            app:destination="@id/postItem"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/postItem"
+        android:name="com.example.tiprankstask.ui.PostItemFragment"
+        tools:layout="@layout/fragment_post_item">
+        <argument
+            android:name="@string/post_link_argument"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true"/>
+    </fragment>
+
+</navigation>
